@@ -1,0 +1,23 @@
+@use 'var';
+
+
+$cor:  blue;
+
+
+@mixin teste(){
+    background-color: $cor;
+}
+
+body{
+    @include teste();
+
+    h1{
+        color: var.$corTexto;
+    }
+}
+
+@media screen  and (max-width:var.$breakpointMobile){
+    body{
+        background-color: white;
+    }
+}
